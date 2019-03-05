@@ -93,7 +93,7 @@ class QISceneKitViewController: UIViewController, ARSCNViewDelegate, ARSessionDe
 //        DispatchQueue.main.async {
 //            // Rotate Max to face the camera?
 //            self.characterOrientation?.runAction(
-//                SCNAction.rotateTo(x: 0.0, y: 3.0, z: 0.0, duration: 0.1, usesShortestUnitArc:true))
+//                SCNAction.rotateTo(x: 0.0, y: 3.0, z: 0.0, duration: 0.01, usesShortestUnitArc:true))
 //        }
 //    }
     
@@ -128,7 +128,7 @@ class QISceneKitViewController: UIViewController, ARSCNViewDelegate, ARSessionDe
         
         let spinAnimation = self.loadAnimation(fromSceneNamed: "Art.scnassets/character/max_spin.scn")
         spinAnimation.animation.isRemovedOnCompletion = false
-        spinAnimation.speed = 1.5
+        spinAnimation.speed = 1.8
         spinAnimation.stop()
         node.addAnimationPlayer(spinAnimation, forKey: "spin")
     }
